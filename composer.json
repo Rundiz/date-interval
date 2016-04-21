@@ -1,0 +1,23 @@
+{
+	"name": "rundiz/date-interval",
+	"type": "library",
+	"description": "Set the begins date, interval get get exactly start date in range.",
+	"keywords": ["date", "date range", "interval", "schedule", "date repeat", "repeat event", "date interval", "week interval", "month interval", "year interval"],
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Vee W.",
+			"email": "kawewong@gmail.com",
+			"homepage": "http://rundiz.com",
+			"role": "Developer"
+		}
+	],
+	"require": {
+		"php": ">=5.4.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"Rundiz\\DateInterval\\" : "Rundiz/DateInterval"
+		}
+	}
+}
