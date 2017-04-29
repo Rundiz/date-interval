@@ -3,7 +3,7 @@
 
 namespace Rundiz\DateInterval\Tests;
 
-class YearIntervalTest extends \PHPUnit_Framework_TestCase
+class YearIntervalTest extends \PHPUnit\Framework\TestCase
 {
 
 

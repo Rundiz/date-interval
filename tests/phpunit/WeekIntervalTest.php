@@ -3,7 +3,7 @@
 
 namespace Rundiz\DateInterval\Tests;
 
-class WeekIntervalTest extends \PHPUnit_Framework_TestCase
+class WeekIntervalTest extends \PHPUnit\Framework\TestCase
 {
 
 
