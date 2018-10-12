@@ -22,16 +22,16 @@ echo 'begins date: '.$date_begins.' end date: '.$date_end.'<br>'."\n";
 echo 'interval: '.$interval_num.' '.$interval_unit.' (D = days, W = weeks, M = months, Y = years)<br>'."\n";
 echo '<hr>'."\n\n";
 
-$okvdint = new \Rundiz\DateInterval\DateInterval();
-$okvdint->date_begins = $date_begins;
-$okvdint->date_end = $date_end;
-$okvdint->setInterval($interval_num, $interval_unit);
+$DateInterval = new \Rundiz\DateInterval\DateInterval();
+$DateInterval->date_begins = $date_begins;
+$DateInterval->date_end = $date_end;
+$DateInterval->setInterval($interval_num, $interval_unit);
 
 // list all dates from begins to end. ---------------------------------------------------------------------------------------
 echo '<div style="float:left; margin-right: 20px; width: 300px;">'."\n";
 echo 'start list dates from begins until end.<br>'."\n";
 
-$list_dates = $okvdint->getTheDates();
+$list_dates = $DateInterval->getTheDates();
 
 listDates($list_dates);
 
@@ -40,9 +40,9 @@ echo '</div>'."\n";
 
 
 // set start displaying date and stop displaying date 1 and list all dates from start within interval range. ----------
-$date_start = date($previous_year.'-06-01');
-$date_stop = date('Y-11-30');
-$list_dates = $okvdint->getTheDates($date_start, $date_stop);
+$date_start = date(($previous_year - 2) . '-03-01');
+$date_stop = date('Y-09-30');
+$list_dates = $DateInterval->getTheDates($date_start, $date_stop);
 
 echo '<div style="float:left; margin-right: 20px; width: 430px;">'."\n";
 echo 'list start date ('.$date_start.') until stop date ('.$date_stop.').<br>'."\n";
@@ -55,7 +55,7 @@ echo '</div>'."\n";
 // set start displaying date and stop displaying date 2 and list all dates from start within interval range. ----------
 $date_start = date($previous_year.'-07-02');
 $date_stop = date('Y-12-30');
-$list_dates = $okvdint->getTheDates($date_start, $date_stop);
+$list_dates = $DateInterval->getTheDates($date_start, $date_stop);
 
 echo '<div style="float:left; margin-right: 20px; width: 430px;">'."\n";
 echo 'list start date ('.$date_start.') until stop date ('.$date_stop.').<br>'."\n";
@@ -68,4 +68,4 @@ echo '</div>'."\n";
 // end ------------------------------------------------------------------------------------------------------------------------
 echo '<div style="clear: both;"></div>'."\n\n";
 echo pageBenchmark();
-unset($okvdint);
+unset($DateInterval);

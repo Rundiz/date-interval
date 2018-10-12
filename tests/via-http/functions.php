@@ -18,8 +18,9 @@ if (!function_exists('listDates')) {
     function listDates($list_dates)
     {
         if ($list_dates == false || !is_array($list_dates)) {
+            global $DateInterval;
             echo "\t".'<h3>Error!</h3>'."\n";
-            foreach ($okvdint->getErrorMessage() as $err_msg) {
+            foreach ($DateInterval->getErrorMessage() as $err_msg) {
                 echo "\t\t".$err_msg.'<br>'."\n";
             }
             unset($err_msg);

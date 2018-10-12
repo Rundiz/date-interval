@@ -113,8 +113,7 @@ class MonthIntervalTest extends \PHPUnit\Framework\TestCase
         $date_start = '2015-07-02';
         $date_stop = '2016-12-30';
         $list_dates = $DateInterval->getTheDates($date_start, $date_stop);
-        $expected_results = array(
-            '2015-07-01', 
+        $expected_results = array( 
             '2015-10-01', 
             '2016-01-01', 
             '2016-04-01', 
