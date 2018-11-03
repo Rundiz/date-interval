@@ -2,5 +2,5 @@
 * -text
 
 # Export ignore folders, files.
-tests/ export-ignore
+tests export-ignore
 phpunit.xml export-ignore
