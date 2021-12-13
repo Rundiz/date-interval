@@ -96,6 +96,10 @@ class DateInterval
      */
     private function getDateTimeObject($dateString)
     {
+        if (!is_string($dateString)) {
+            $dateString = '';
+        }
+
         $DateTime = \DateTime::createFromFormat($this->date_format, $dateString);
         if ($DateTime instanceof \DateTime) {
             $DateTime->setTime(0, 0, 0);
