@@ -29,7 +29,7 @@ class ErrorTest extends \PHPUnit\Framework\TestCase
         $errorCodes = $DateInterval->getErrorCodes();
         $this->assertCount(1, $errorMessages);
         $this->assertCount(1, $errorCodes);
-        $this->assertArraySubset(['RDDINTV_NO_DATE_BEGINS'], $errorCodes);
+        $this->assertSame(['RDDINTV_NO_DATE_BEGINS'], $errorCodes);
         $DateInterval->reset();
         unset($errorCodes, $errorMessages);
 
@@ -41,7 +41,7 @@ class ErrorTest extends \PHPUnit\Framework\TestCase
         $errorCodes = $DateInterval->getErrorCodes();
         $this->assertCount(1, $errorMessages);
         $this->assertCount(1, $errorCodes);
-        $this->assertArraySubset(['RDDINTV_NO_DATE_BEGINS'], $errorCodes);
+        $this->assertSame(['RDDINTV_NO_DATE_BEGINS'], $errorCodes);
         $DateInterval->reset();
         unset($errorCodes, $errorMessages);
 
@@ -53,7 +53,7 @@ class ErrorTest extends \PHPUnit\Framework\TestCase
         $errorCodes = $DateInterval->getErrorCodes();
         $this->assertCount(1, $errorMessages);
         $this->assertCount(1, $errorCodes);
-        $this->assertArraySubset(['RDDINTV_INCORRECT_DATE_BEGINS'], $errorCodes);
+        $this->assertSame(['RDDINTV_INCORRECT_DATE_BEGINS'], $errorCodes);
         $DateInterval->reset();
         unset($errorCodes, $errorMessages);
     }// testNoBeginsDate
@@ -70,7 +70,7 @@ class ErrorTest extends \PHPUnit\Framework\TestCase
         $errorCodes = $DateInterval->getErrorCodes();
         $this->assertCount(1, $errorMessages);
         $this->assertCount(1, $errorCodes);
-        $this->assertArraySubset(['RDDINTV_DATE_BEGINS_MORE_THAN_DATE_END'], $errorCodes);
+        $this->assertSame(['RDDINTV_DATE_BEGINS_MORE_THAN_DATE_END'], $errorCodes);
         $DateInterval->reset();
         unset($errorCodes, $errorMessages);
 
@@ -82,7 +82,7 @@ class ErrorTest extends \PHPUnit\Framework\TestCase
         $errorCodes = $DateInterval->getErrorCodes();
         $this->assertCount(1, $errorMessages);
         $this->assertCount(1, $errorCodes);
-        $this->assertArraySubset(['RDDINTV_INCORRECT_DATE_END'], $errorCodes);
+        $this->assertSame(['RDDINTV_INCORRECT_DATE_END'], $errorCodes);
         $DateInterval->reset();
         unset($errorCodes, $errorMessages);
 
@@ -94,7 +94,7 @@ class ErrorTest extends \PHPUnit\Framework\TestCase
         $errorCodes = $DateInterval->getErrorCodes();
         $this->assertCount(1, $errorMessages);
         $this->assertCount(1, $errorCodes);
-        $this->assertArraySubset(['RDDINTV_INCORRECT_DATE_END'], $errorCodes);
+        $this->assertSame(['RDDINTV_INCORRECT_DATE_END'], $errorCodes);
         $DateInterval->reset();
         unset($errorCodes, $errorMessages);
     }// testEndDate
@@ -110,7 +110,7 @@ class ErrorTest extends \PHPUnit\Framework\TestCase
         $errorCodes = $DateInterval->getErrorCodes();
         $this->assertCount(1, $errorMessages);
         $this->assertCount(1, $errorCodes);
-        $this->assertArraySubset(['RDDINTV_NO_INTERVAL_RANGE'], $errorCodes);
+        $this->assertSame(['RDDINTV_NO_INTERVAL_RANGE'], $errorCodes);
     }// testNoInterval
 
 
@@ -125,7 +125,7 @@ class ErrorTest extends \PHPUnit\Framework\TestCase
         $errorCodes = $DateInterval->getErrorCodes();
         $this->assertCount(1, $errorMessages);
         $this->assertCount(1, $errorCodes);
-        $this->assertArraySubset(['RDDINTV_START_DATE_MORE_THAN_DATE_END'], $errorCodes);
+        $this->assertSame(['RDDINTV_START_DATE_MORE_THAN_DATE_END'], $errorCodes);
         $DateInterval->reset();
         unset($errorCodes, $errorMessages);
 
@@ -137,7 +137,7 @@ class ErrorTest extends \PHPUnit\Framework\TestCase
         $errorCodes = $DateInterval->getErrorCodes();
         $this->assertCount(1, $errorMessages);
         $this->assertCount(1, $errorCodes);
-        $this->assertArraySubset(['RDDINTV_START_DATE_MORE_THAN_DATE_END'], $errorCodes);
+        $this->assertSame(['RDDINTV_START_DATE_MORE_THAN_DATE_END'], $errorCodes);
         $DateInterval->reset();
         unset($errorCodes, $errorMessages);
 
@@ -149,7 +149,7 @@ class ErrorTest extends \PHPUnit\Framework\TestCase
         $errorCodes = $DateInterval->getErrorCodes();
         $this->assertCount(1, $errorMessages);
         $this->assertCount(1, $errorCodes);
-        $this->assertArraySubset(['RDDINTV_EXACT_START_DATE_MORE_THAN_DATE_END'], $errorCodes);
+        $this->assertSame(['RDDINTV_EXACT_START_DATE_MORE_THAN_DATE_END'], $errorCodes);
         $DateInterval->reset();
         unset($errorCodes, $errorMessages);
 
@@ -161,7 +161,7 @@ class ErrorTest extends \PHPUnit\Framework\TestCase
         $errorCodes = $DateInterval->getErrorCodes();
         $this->assertCount(1, $errorMessages);
         $this->assertCount(1, $errorCodes);
-        $this->assertArraySubset(['RDDINTV_START_DATE_MORE_THAN_STOP_DATE'], $errorCodes);
+        $this->assertSame(['RDDINTV_START_DATE_MORE_THAN_STOP_DATE'], $errorCodes);
         $DateInterval->reset();
         unset($errorCodes, $errorMessages);
     }// testStartDate

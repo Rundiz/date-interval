@@ -101,7 +101,7 @@ class DateIntervalTest extends \PHPUnit\Framework\TestCase
             '2016-12-29', 
             '2016-12-31'
         );
-        $this->assertArraySubset($expected_results, $list_dates, '', sprintf('Generated date interval does not match the expected results. %s', var_export($list_dates, true)));
+        $this->assertSame($expected_results, $list_dates);
         unset($expected_results, $list_dates);
 
         $date_start = '2016-09-01';
@@ -154,7 +154,7 @@ class DateIntervalTest extends \PHPUnit\Framework\TestCase
             '2016-11-27', 
             '2016-11-29'
         );
-        $this->assertArraySubset($expected_results, $list_dates, '', sprintf('Generated date interval does not match the expected results. %s', var_export($list_dates, true)));
+        $this->assertSame($expected_results, $list_dates);
         unset($date_start, $date_stop, $expected_results, $list_dates);
 
         $date_start = '2016-10-01';
@@ -192,7 +192,7 @@ class DateIntervalTest extends \PHPUnit\Framework\TestCase
             '2016-11-27', 
             '2016-11-29'
         );
-        $this->assertArraySubset($expected_results, $list_dates, '', sprintf('Generated date interval does not match the expected results. %s', var_export($list_dates, true)));
+        $this->assertSame($expected_results, $list_dates);
         unset($date_start, $date_stop, $expected_results, $list_dates);
 
         unset($date_begins, $date_end, $DateInterval, $interval_num, $interval_unit);
@@ -255,7 +255,7 @@ class DateIntervalTest extends \PHPUnit\Framework\TestCase
             '2016-12-27', 
             '2016-12-31'
         );
-        $this->assertArraySubset($expected_results, $list_dates, '', sprintf('Generated date interval does not match the expected results. %s', var_export($list_dates, true)));
+        $this->assertSame($expected_results, $list_dates);
         unset($expected_results, $list_dates);
 
         $date_start = '2016-09-01';
@@ -286,7 +286,7 @@ class DateIntervalTest extends \PHPUnit\Framework\TestCase
             '2016-11-25', 
             '2016-11-29'
         );
-        $this->assertArraySubset($expected_results, $list_dates, '', sprintf('Generated date interval does not match the expected results. %s', var_export($list_dates, true)));
+        $this->assertSame($expected_results, $list_dates);
         unset($date_start, $date_stop, $expected_results, $list_dates);
 
         $date_start = '2016-10-01';
@@ -309,7 +309,7 @@ class DateIntervalTest extends \PHPUnit\Framework\TestCase
             '2016-11-25', 
             '2016-11-29'
         );
-        $this->assertArraySubset($expected_results, $list_dates, '', sprintf('Generated date interval does not match the expected results. %s', var_export($list_dates, true)));
+        $this->assertSame($expected_results, $list_dates);
         unset($date_start, $date_stop, $expected_results, $list_dates);
 
         unset($date_begins, $date_end, $DateInterval, $interval_num, $interval_unit);
@@ -338,7 +338,7 @@ class DateIntervalTest extends \PHPUnit\Framework\TestCase
             '2016-11-02', 
             '2016-12-03'
         );
-        $this->assertArraySubset($expected_results, $list_dates, '', sprintf('Generated date interval does not match the expected results. %s', var_export($list_dates, true)));
+        $this->assertSame($expected_results, $list_dates);
         unset($expected_results, $list_dates);
 
         $date_start = '2016-09-01';
@@ -349,7 +349,7 @@ class DateIntervalTest extends \PHPUnit\Framework\TestCase
             '2016-10-02', 
             '2016-11-02'
         );
-        $this->assertArraySubset($expected_results, $list_dates, '', sprintf('Generated date interval does not match the expected results. %s', var_export($list_dates, true)));
+        $this->assertSame($expected_results, $list_dates);
         unset($date_start, $date_stop, $expected_results, $list_dates);
 
         $date_start = '2016-10-01';
@@ -359,7 +359,7 @@ class DateIntervalTest extends \PHPUnit\Framework\TestCase
             '2016-10-02', 
             '2016-11-02'
         );
-        $this->assertArraySubset($expected_results, $list_dates, '', sprintf('Generated date interval does not match the expected results. %s', var_export($list_dates, true)));
+        $this->assertSame($expected_results, $list_dates);
         unset($date_start, $date_stop, $expected_results, $list_dates);
 
         unset($date_begins, $date_end, $DateInterval, $interval_num, $interval_unit);
