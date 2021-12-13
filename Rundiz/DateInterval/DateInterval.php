@@ -1,7 +1,7 @@
 <?php
 /**
  * 
- * @version 1.0.3
+ * @version 1.0.4
  * @author Vee W.
  * @license http://opensource.org/licenses/MIT
  * 
